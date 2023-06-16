@@ -1,0 +1,6 @@
+ py_logger = logging.getLogger(path)
+    py_logger.setLevel(logging.INFO)
+    py_handler = logging.FileHandler(f"{path}", mode='w')
+    py_formatter = logging.Formatter("%(asctime)s %(levelname)s %(message)s")
+    py_handler.setFormatter(py_formatter)
+    py_logger.addHandler(py_handler)
